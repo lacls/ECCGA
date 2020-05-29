@@ -152,7 +152,7 @@ def MPM(population):
                             Sum_MC+=(pow(2,1)-1)
                         else:
                             Sum_MC+=(pow(2,len(strt[index]))-1)
-                MC_model= (math.log2(len(population_[:,1])+1))*Sum_MC
+                MC_model= (np.log2(len(population_[:,1])+1))*Sum_MC
                 CPC_model,roulete_selection=CPC_Calculation(arr,population_,len(population_[:,1]))
                 if MDL_BestOne > MC_model+CPC_model:
                     MDL_BestOne=MC_model+CPC_model
